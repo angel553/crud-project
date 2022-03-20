@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LibroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,15 +21,15 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function () {    
     Route::get('/bienvenida', function () {
         return view('crud');
-    });
+    });    
     
-    Route::get('/create', function () {
+    /* Route::get('/create', function () {
         return view('create');
-    });
+    }); */
     
-    Route::get('/read', function () {
+    /* Route::get('/read', function () {
         return view('read');
-    });
+    }); */
     
     Route::get('/update', function () {
         return view('update');
@@ -37,12 +38,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/delete', function () {
         return view('delete');
     });
+
+    Route::get('/readall', [LibroController::class, 'readall']);
+
+    Route::resource('/libro', LibroController::class);
+
 });
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
-    return view('crud');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/', [LibroController::class, 'index'])->name('dashboard');
 
 /* Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

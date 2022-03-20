@@ -13,7 +13,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="stats-icon purple">
-                                                <a href="/create">
+                                                <a href="libro/create">
                                                     <i>
                                                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABmJLR0QA/wD/AP+gvaeTAAAD6ElEQVRoge3az29VRRTA8Y+Egral+INEN0hDaiWCBNdGQxA1EVET44+VC9HgykjY+AcQou40ERMTl4KgS93qRv8BQKONAQpVpEVJrCZqgLqYkr7OPff13R8PNOk3mcXMm3vmnLkz554581hmmWWacFMfZK7AVmzBOO7E8Pxvf+ACJnASx3G1Dzo0ZgBP4Rh+w1yP5VccnX924LprHTCM/fhZ70aUlZ+wD0PX1YIOduNsFwWbGPZSXaXq7KG1+AjPLtHvCiZxBrPzbSPYgFFpr3XjU7yC32vo2DPj+FH57E7jXTym+9IZwuN4DzNd5E1grA92gAckDxUNfAp7sKqG3FV4VXqTkexfsK2h7gXuERtzGQdwSwtjDOLgvMzIqNbe1K3iZXYBD7c1SAfbpaUbLb+RNgb4LBB+Rnpr/WJccij5uJ80FfxiIHQa9zYV3ANj0lLLx1/Ku5YyLH0T8j3Tj2VWxg7FPXVW2m+V2a84OwdaUbMabwV6vFFVyIBiOHNKdW+2XorvOsv6ijIGFffTlIqx39OKs7KnoiKwOZCzuYacvYGcXVUEHMsenlbvo9mWQasVI4rDUcconlqBR7K2I/inhiJt8bc0yZ08KtA/Mmgrbs/avmhHr0Z8ntXXSYfIRUQG3Z/Vr+CblpRqwteKp9tcVyuDB8ez+iT+XGKwjbitpD3nPtwctF+SPGkZs9I3aLSjLdc15AOLN9+XPTyTO5E6Jd8jEV9lzxzKO0RLbk1W7+sBqyK5LrmuS54a/3dEBs1m9VZC9pbIdcl1DZ3CTFbf0MNAb+LtoH2j4t54Xrz5L/UwzmhWn847RAZNBEKGpSRhGWXe6a+g7Tt820VWGWtwd9aW6xouuZNBnwdrKNA2DynqeyLvFBl0XMp+dlIpEOwTT2b1GcXJL+Woxf5+xo0PTi9mcj6OOpa57bzzOg2ymS3wMu7I2kKDyhhQPH6fdmMOeEOKKedzYofWlX2Ky+VgVSEt8E6gx+t1BA1JM5EnSba3omZv7JSi/U4dJjVIbD6nODsz2NRU0x4YE2drn2kqOIqkJ/U3N7dJfFUTHrurslb6IkdvakcbA2TsVHTRc/heEF3XpSyLeVnKm9VK/GUMSQ4g3zNzOC8+LDZim9ioa0twr3of39V4Tflt4Hkpz9EXxsTL71q5iPfxhIWb74jh+T6HxMurc5lVejN1riRH8CFeWKLfVWnWT1t8JTkqHUmWGvuI9NYLZ55+sVv5rVuTMuUGhlmDUuJ8qouCvZZzUgTQxm1gY1ZK4f1h3S+B8zItBZm71IjNIvr115gtFv4ac5cFBzErff1/kE6tJyTDlllmmf8I/wL+hdQjAJuY+wAAAABJRU5ErkJggg=="/>
                                                     </i>
@@ -22,7 +22,7 @@
                                         </div>
                                         <br>
                                         <div class="col-md-6">
-                                            <a href="/create">
+                                            <a href="libro/create">
                                                 <h6 class="text-muted font-extrabold">CREATE</h6>
                                             </a>
                                             {{-- <h6 class="font-extrabold mb-0">112.000</h6> --}}
@@ -37,7 +37,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="stats-icon blue">
-                                                <a href="/read">
+                                                <a href="/readall">
                                                     <i>
                                                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAC3ElEQVRoge2ZvWtTURjGf3WoEYMgIppBC23BQicXwcF8GLq4OraWglAU+j9YdPBjd9dBEDeTkLbgoi62ilutbn4sSuwgFTWJGIeTlPCek3tzbt6bWMwPDvSk3Od5nxzu+QoMGRILIz0+nwIuABlgGhgDDjX/9w34AGwCT4Ey8LlHP3WyQAn4DTS6bHWgCKQHUK/FJLBK98V3amVgos+17zIPfA8p0KftAHN9TQBcDyjoDXATyAOngIPNNtX87BawFfD8cr9C3OhQwDqQ89A5CzzvoBV7mHmHaRVYJNqMNwJcaWpI3VmFep1MYr8TX4FzCtppYFto7wDjCtoWcnaqohOiRQaoCY+Soj5g1gk59IvaJsBVh4/ml0VJiL+g912AixFgQ3gVtMRTmFW4XTyjJe4gJ7zqwDEN4ctCeFNDNIS3wnPBV2Cf4zP57asNdQCPRT/rK+AKMi36T3xFIyA9ZA2huIKMif4nX9EIfAypIRJy1U1qiIaQFJ6/fAVcIyKJY9qVyDrqvQqA2Sq0k/IVjYD0qPgKuIK8F/0TvqIROCn6X3wFXEHkujHjKxoB6fFaQ1QuiFsaoiG8E54XNUSPY29RvBcoD/LCqwoc0RIvCvF14ts0vhJe9zUN0kK8gTnZabPk8DmtbVIWBjV076Ry2AerB4r6u0xg1pR2o210tvRZ7KNuBTiqoO1kDnvoa5iTXdTLhyXskWgAz4DR3kvuzLLDtAG8BM576OSxX2zZykBCq3AXncI0MIei25hFbQqzAUw2/54B7mCvE0GtQMwjM4v9zsTVisD+OMOMY19M+LY/wCNgbdBhwFzZFLB3AEHtJ/AQONPUSAArIc+U+hEGzG3HAnAP8/JXMFuMH5iT5QZwF7gEHHY8/0+F6ZVR7C2RbCvEPJtp0U2YVYZh+s9/F2YNODCoAn3oZjbr+++PUQkamWsDrCsSrjB7LkSL9jB7NkSLBDH+WDpkSAB/AT5+sT1GQO1MAAAAAElFTkSuQmCC"/>
                                                     </i>
@@ -45,7 +45,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="/read">
+                                            <a href="/readall">
                                                 <h6 class="text-muted font-extrabold">READ</h6>
                                             </a>
                                             {{-- <h6 class="font-extrabold mb-0">183.000</h6> --}}
@@ -113,6 +113,59 @@
                             </div>
                         </div>
                     </div> --}}
+                </div>
+            </section>
+            {{-- TABLA --}}
+            <section class="section">
+                <div class="row" id="table-striped">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Libros actuales</h4>
+                            </div>
+                            <div class="card-content">                   
+                                <!-- table striped -->
+                                <div class="table-responsive">
+                                    <table class="table table-striped mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Título</th>
+                                                <th>Autor</th>
+                                                <th>Publicación</th>
+                                                <th>ISBM</th>
+                                                <th>Cantidad</th>
+                                                <th>Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{-- <tr>
+                                                <td class="text-bold-500">Michael Right</td>
+                                                <td>$15/hr</td>
+                                                <td class="text-bold-500">UI/UX</td>
+                                                <td>Remote</td>
+                                                <td>Austin,Taxes</td> 
+                                                <td><a href="#"><i
+                                                            class="badge-circle badge-circle-light-secondary font-medium-1"
+                                                            data-feather="mail"></i></a></td> 
+                                                </tr> --}}                                                                            
+                                            @foreach ($libros as $libro)
+                                                <tr>                                    
+                                                    <td>{{ $libro->titulo }}</td>
+                                                    <td>{{ $libro->autor }}</td>
+                                                    <td>{{ $libro->fecha }}</td>
+                                                    <td>{{ $libro->isbn }}</td>
+                                                    <td>{{ $libro->cantidad }}</td>  
+                                                    <td><a href="/libro/{{ $libro->id }}" class="btn btn-info">Ver detalle</a><i
+                                                    class="badge-circle badge-circle-light-secondary font-medium-1"
+                                                    data-feather="mail"></i></a></td>
+                                                </tr>                                                
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

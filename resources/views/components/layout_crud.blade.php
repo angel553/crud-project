@@ -9,14 +9,14 @@
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
     
-<link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+<link rel="stylesheet" href="/assets/vendors/iconly/bold.css">
 
-    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="/assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
 </head>
 
 <body>    
@@ -39,7 +39,8 @@
             
             <li
                 class="sidebar-item  ">
-                <a href="/bienvenida" class='sidebar-link'>
+                {{-- <a href="/bienvenida" class='sidebar-link'> --}}
+                <a href="/" class='sidebar-link'>
                     <i class="bi bi-grid-fill"></i>
                     <span>Inicio</span>
                 </a>
@@ -53,10 +54,10 @@
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item ">
-                        <a href="/create">CREATE</a>
+                        <a href="/libro/create">CREATE</a>
                     </li>
                     <li class="submenu-item ">
-                        <a href="/read">READ</a>
+                        <a href="/readall">READ</a>
                     </li>
                     <li class="submenu-item ">
                         <a href="/update">UPDATE</a>
@@ -99,19 +100,19 @@
                             <p>2022 &copy; CRUD</p>
                         </div>
                         <div class="float-end">
-                            <a href="http://ahmadsaugi.com">Luis Angel Valverde Briseño</a></p>
+                            <a href="#">Luis Angel Valverde Briseño</a></p>
                         </div>
                     </div>
                 </footer>
             </div>
         
     </div>
-    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
     
-<script src="assets/vendors/apexcharts/apexcharts.js"></script>
-<script src="assets/js/pages/dashboard.js"></script>
-<script src="assets/js/mazer.js"></script>
+<script src="/assets/vendors/apexcharts/apexcharts.js"></script>
+<script src="/assets/js/pages/dashboard.js"></script>
+<script src="/assets/js/mazer.js"></script>
 
 </body>
 

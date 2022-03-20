@@ -8,44 +8,60 @@
                         <h4 class="card-title">Agregar Libro</h4>
                     </div>
                     <div class="card-content">
-                        <div class="card-body">
-                            <form class="form form-horizontal">
+                        <div class="card-body">                            
+                            <form class="form form-horizontal" action="/libro" method="POST">
+                                @csrf
                                 <div class="form-body">
                                     <div class="row">
                                         <div class="col-md-4">
                                             <label>Título</label>
                                         </div>
                                         <div class="col-md-8 form-group">
-                                            <input type="text" id="first-name" class="form-control" name="fname"
-                                                placeholder="Título">
+                                            <input type="text" id="first-name" class="form-control" name="titulo"
+                                                placeholder="Título" value="{{ old('titulo') }}">
+                                            @error('titulo')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="col-md-4">
                                             <label>Autor</label>
                                         </div>
                                         <div class="col-md-8 form-group">
-                                            <input type="email" id="email-id" class="form-control" name="email-id"
-                                                placeholder="Autor">
+                                            <input type="text" id="email-id" class="form-control" name="autor"
+                                                placeholder="Autor" value="{{ old('autor') }}">
+                                            @error('autor')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="col-md-4">
                                             <label>Fecha de publicación</label>
                                         </div>
                                         <div class="col-md-8 form-group">
-                                            <input type="number" id="contact-info" class="form-control" name="contact"
-                                                placeholder="Fecha de publicación">
+                                            <input type="date" id="contact-info" class="form-control" name="fecha"
+                                                placeholder="Fecha de publicación" value="{{ old('fecha') }}">
+                                            @error('fecha')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="col-md-4">
                                             <label>ISBN</label>
                                         </div>
                                         <div class="col-md-8 form-group">
-                                            <input type="password" id="password" class="form-control" name="password"
-                                                placeholder="ISBN">
+                                            <input type="text" id="password" class="form-control" name="isbn"
+                                                placeholder="ISBN" value="{{ old('isbn') }}">
+                                            @error('isbn')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="col-md-4">
                                         <label>Cantidad</label>
                                         </div>
                                         <div class="col-md-8 form-group">
-                                            <input type="password" id="password" class="form-control" name="password"
-                                                placeholder="Cantidad">
+                                            <input type="number" id="password" class="form-control" name="cantidad"
+                                                placeholder="Cantidad" value={{ old('cantidad') }}>
+                                            @error('cantidad')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         {{-- <div class="col-12 col-md-8 offset-md-4 form-group">
                                         <div class="input-group mb-3">

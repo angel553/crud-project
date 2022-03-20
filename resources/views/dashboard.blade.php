@@ -11,9 +11,5 @@
                 {{-- <x-jet-welcome /> --}}
             </div>
         </div>
-    </div>
-
-    <x-layout_crud>
-        
-    </x-layout_crud>    
+    </div>     
 </x-app-layout>

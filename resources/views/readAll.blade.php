@@ -31,23 +31,23 @@
                                       <td><a href="#"><i
                                                   class="badge-circle badge-circle-light-secondary font-medium-1"
                                                   data-feather="mail"></i></a></td> 
-                                      </tr> --}}                                                                                                            
-                                  
-                                  <tr>                                    
-                                      <td>{{ $libro->titulo }}</td>
-                                      <td>{{ $libro->autor }}</td>
-                                      <td>{{ $libro->fecha }}</td>
-                                      <td>{{ $libro->isbn }}</td>
-                                      <td>{{ $libro->cantidad }}</td>  
-                                      <td><a href="/libro/{{ $libro->id }}/edit" class="btn btn-info">Editar</a><i
-                                        class="badge-circle badge-circle-light-secondary font-medium-1"
-                                        data-feather="mail"></i></a>
-                                        <a href="#" class="btn btn-danger">Eliminar</a><i
-                                        class="badge-circle badge-circle-light-secondary font-medium-1"
-                                        data-feather="mail"></i></a>
-                                      </td> 
-                                  </tr>                                                
-                                 
+                                      </tr> --}}                                                                            
+                                  @foreach ($libros as $libro)
+                                      <tr>                                    
+                                          <td>{{ $libro->titulo }}</td>
+                                          <td>{{ $libro->autor }}</td>
+                                          <td>{{ $libro->fecha }}</td>
+                                          <td>{{ $libro->isbn }}</td>
+                                          <td>{{ $libro->cantidad }}</td>  
+                                          <td><a href="/libro/{{ $libro->id }}/edit" class="btn btn-info">Editar</a><i
+                                            class="badge-circle badge-circle-light-secondary font-medium-1"
+                                            data-feather="mail"></i></a>
+                                            <a href="#" class="btn btn-danger">Eliminar</a><i
+                                            class="badge-circle badge-circle-light-secondary font-medium-1"
+                                            data-feather="mail"></i></a>
+                                          </td>
+                                      </tr>                                                
+                                  @endforeach
                               </tbody>
                           </table>
                       </div>

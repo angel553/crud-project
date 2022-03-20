@@ -39,7 +39,8 @@
             
             <li
                 class="sidebar-item  ">
-                <a href="/bienvenida" class='sidebar-link'>
+                {{-- <a href="/bienvenida" class='sidebar-link'> --}}
+                <a href="/" class='sidebar-link'>
                     <i class="bi bi-grid-fill"></i>
                     <span>Inicio</span>
                 </a>
@@ -53,7 +54,7 @@
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item ">
-                        <a href="/create">CREATE</a>
+                        <a href="/libro/create">CREATE</a>
                     </li>
                     <li class="submenu-item ">
                         <a href="/read">READ</a>
