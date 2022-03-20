@@ -39,12 +39,13 @@
                                           <td>{{ $libro->fecha }}</td>
                                           <td>{{ $libro->isbn }}</td>
                                           <td>{{ $libro->cantidad }}</td>  
-                                          <td><a href="/libro/{{ $libro->id }}/edit" class="btn btn-info">Editar</a><i
-                                            class="badge-circle badge-circle-light-secondary font-medium-1"
-                                            data-feather="mail"></i></a>
-                                            <a href="#" class="btn btn-danger">Eliminar</a><i
-                                            class="badge-circle badge-circle-light-secondary font-medium-1"
-                                            data-feather="mail"></i></a>
+                                          <td>
+                                            <a href="/libro/{{ $libro->id }}/edit" class="btn btn-info">Editar</a>
+                                            <form action="/libro/{{ $libro->id }}" method="POST" class="form form-horizontal">
+                                              @csrf
+                                              @method('DELETE')
+                                              <input type="submit" value="Eliminar" class="btn btn-danger">                                             
+                                            </form> 
                                           </td>
                                       </tr>                                                
                                   @endforeach

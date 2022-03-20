@@ -88,7 +88,24 @@ class LibroController extends Controller
      */
     public function update(Request $request, Libro $libro)
     {
-        //
+        //dd('ahh');        
+        $request->validate([
+            'titulo' => ['required', 'max:255'],
+            'autor' => ['required', 'max:255'],
+            'fecha' => 'required',
+            'isbn' => ['required', 'max:13'],
+            'cantidad' => ['required', 'min:1', 'max:99'],
+        ]);
+
+        $libro->titulo = $request->titulo;
+        $libro->autor = $request->autor;
+        $libro->fecha = $request->fecha;
+        $libro->isbn = $request->isbn;
+        $libro->cantidad = $request->cantidad;
+        
+        $libro->save();
+
+        return redirect('/libro/' . $libro->id);
     }
 
     /**
@@ -99,7 +116,8 @@ class LibroController extends Controller
      */
     public function destroy(Libro $libro)
     {
-        //
+        $libro->delete();
+        return redirect('/');
     }
 
     /**
@@ -112,5 +130,29 @@ class LibroController extends Controller
     {
         $libros = Libro::all();        
         return view('readAll', compact('libros'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Libro  $libro
+     * @return \Illuminate\Http\Response
+     */
+    public function actualizar()
+    {
+        $libros = Libro::all();        
+        return view('update', compact('libros'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Libro  $libro
+     * @return \Illuminate\Http\Response
+     */
+    public function eliminar()
+    {
+        $libros = Libro::all();        
+        return view('delete', compact('libros'));
     }
 }

@@ -1,4 +1,4 @@
-
+{{-- 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,65 +17,11 @@
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
-</head>
+</head> --}}
 
 <body style="overflow-y: auto;">
-    <div id="app">
-        <div id="sidebar" class="active">
-            <div class="sidebar-wrapper active">
-    <div class="sidebar-header">
-        <div class="d-flex justify-content-between">
-            <div class="logo">
-                {{-- <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a> --}}
-            </div>
-            <div class="toggler">
-                <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="sidebar-menu">
-        <ul class="menu">
-            <li class="sidebar-title">Menu</li>
-            
-            <li
-                class="sidebar-item  ">
-                {{-- <a href="/bienvenida" class='sidebar-link'> --}}
-                <a href="/" class='sidebar-link'>
-                    <i class="bi bi-grid-fill"></i>
-                    <span>Inicio</span>
-                </a>
-            </li>
-            
-            <li
-                class="sidebar-item  has-sub">
-                <a href="#" class='sidebar-link'>
-                    <i class="bi bi-stack"></i>
-                    <span>CRUD</span>
-                </a>
-                <ul class="submenu ">
-                    <li class="submenu-item ">
-                        <a href="/libro/create">CREATE</a>
-                    </li>
-                    <li class="submenu-item ">
-                        <a href="/read">READ</a>
-                    </li>
-                    <li class="submenu-item ">
-                        <a href="/update">UPDATE</a>
-                    </li>
-                    <li class="submenu-item ">
-                        <a href="/delete">DELETE</a>
-                    </li>
-                </ul>
-    </div>
-    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
-</div>
-        </div>
-        <div id="main">
-            <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a>
-            </header>           
+    <div id="app">        
+        <div id="main">                       
             {{-- TABLA --}}
             <section class="section">
                 <div class="row" id="table-striped">
@@ -108,18 +54,6 @@
                                                 <td><a href="#"><i
                                                             class="badge-circle badge-circle-light-secondary font-medium-1"
                                                             data-feather="mail"></i></a></td> 
-                                            </tr> 
-                                            <tr>                                    
-                                                
-                                            </tr>
-                                            <tr>                                   
-                                                
-                                            </tr>
-                                            <tr>                                    
-                                                
-                                            </tr>
-                                            <tr>                                    
-                                                
                                             </tr> --}}
                                             {{ $slot }}                                
                                         </tbody>

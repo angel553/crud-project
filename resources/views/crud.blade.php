@@ -1,7 +1,7 @@
 <x-app-layout>          
     <x-layout_crud>
         <div class="page-heading">
-            <h3>Operaciones de CRUD en un inventario de libros</h3>
+            <h3>CRUD en un inventario de libros</h3>
         </div>
         <div class="page-content">
             <section class="row">
@@ -23,7 +23,7 @@
                                         <br>
                                         <div class="col-md-6">
                                             <a href="libro/create">
-                                                <h6 class="text-muted font-extrabold">CREATE</h6>
+                                                <h6 class="font-extrabold  btn btn-outline-primary ">CREATE</h6>
                                             </a>
                                             {{-- <h6 class="font-extrabold mb-0">112.000</h6> --}}
                                         </div>
@@ -46,7 +46,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <a href="/readall">
-                                                <h6 class="text-muted font-extrabold">READ</h6>
+                                                <h6 class="font-extrabold btn btn-outline-info ">READ</h6>
                                             </a>
                                             {{-- <h6 class="font-extrabold mb-0">183.000</h6> --}}
                                         </div>
@@ -69,7 +69,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <a href="/update">
-                                                <h6 class="text-muted font-extrabold">UPDATE</h6>
+                                                <h6 class="font-extrabold btn btn-outline-success ">UPDATE</h6>
                                             </a>
                                             {{-- <h6 class="font-extrabold mb-0">80.000</h6> --}}
                                         </div>
@@ -92,7 +92,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <a href="/delete">
-                                                <h6 class="text-muted font-extrabold">DELETE</h6>
+                                                <h6 class="font-extrabold btn btn-outline-danger ">DELETE</h6>
                                             </a>
                                             {{-- <h6 class="font-extrabold mb-0">112</h6> --}}
                                         </div>
@@ -155,9 +155,7 @@
                                                     <td>{{ $libro->fecha }}</td>
                                                     <td>{{ $libro->isbn }}</td>
                                                     <td>{{ $libro->cantidad }}</td>  
-                                                    <td><a href="/libro/{{ $libro->id }}" class="btn btn-info">Ver detalle</a><i
-                                                    class="badge-circle badge-circle-light-secondary font-medium-1"
-                                                    data-feather="mail"></i></a></td>
+                                                    <td><a href="/libro/{{ $libro->id }}" class="btn btn-info">Ver detalle</a></td>
                                                 </tr>                                                
                                             @endforeach
                                         </tbody>

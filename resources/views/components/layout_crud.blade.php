@@ -47,12 +47,12 @@
             </li>
             
             <li
-                class="sidebar-item  has-sub">
+                class="sidebar-item has-sub">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-stack"></i>
                     <span>CRUD</span>
                 </a>
-                <ul class="submenu ">
+                <ul class="submenu">
                     <li class="submenu-item ">
                         <a href="/libro/create">CREATE</a>
                     </li>

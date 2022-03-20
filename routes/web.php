@@ -19,9 +19,9 @@ Route::get('/', function () {
 }); */
 
 Route::middleware(['auth'])->group(function () {    
-    Route::get('/bienvenida', function () {
+    /* Route::get('/bienvenida', function () {
         return view('crud');
-    });    
+    }); */    
     
     /* Route::get('/create', function () {
         return view('create');
@@ -31,15 +31,19 @@ Route::middleware(['auth'])->group(function () {
         return view('read');
     }); */
     
-    Route::get('/update', function () {
+    /* Route::get('/update', function () {
         return view('update');
-    });
+    }); */
     
-    Route::get('/delete', function () {
+    /* Route::get('/delete', function () {
         return view('delete');
-    });
+    }); */
 
     Route::get('/readall', [LibroController::class, 'readall']);
+    
+    Route::get('/update', [LibroController::class, 'actualizar']);
+
+    Route::get('/delete', [LibroController::class, 'eliminar']);
 
     Route::resource('/libro', LibroController::class);
 

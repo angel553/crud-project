@@ -8,7 +8,15 @@
                         <h4 class="card-title">Agregar Libro</h4>
                     </div>
                     <div class="card-content">
-                        <div class="card-body">                            
+                        <div class="card-body"> 
+
+                            @isset($libro)
+                                <form class="form form-horizontal" action="/libro/{{ $libro->id }}" method="POST"> {{-- update --}}                                                            
+                                    @method('PATCH')
+                            @else
+                                <form class="form form-horizontal" action="/libro" method="POST">                            
+                            @endisset                           
+
                             <form class="form form-horizontal" action="/libro" method="POST">
                                 @csrf
                                 <div class="form-body">
@@ -18,7 +26,7 @@
                                         </div>
                                         <div class="col-md-8 form-group">
                                             <input type="text" id="first-name" class="form-control" name="titulo"
-                                                placeholder="Título" value="{{ old('titulo') }}">
+                                                placeholder="Título" value="{{ isset($libro) ? $libro->titulo : '' }}{{ old('titulo') }}">
                                             @error('titulo')
                                                 <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
@@ -28,7 +36,7 @@
                                         </div>
                                         <div class="col-md-8 form-group">
                                             <input type="text" id="email-id" class="form-control" name="autor"
-                                                placeholder="Autor" value="{{ old('autor') }}">
+                                                placeholder="Autor" value="{{ isset($libro) ? $libro->autor : '' }}{{ old('autor') }}">
                                             @error('autor')
                                                 <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
@@ -38,7 +46,7 @@
                                         </div>
                                         <div class="col-md-8 form-group">
                                             <input type="date" id="contact-info" class="form-control" name="fecha"
-                                                placeholder="Fecha de publicación" value="{{ old('fecha') }}">
+                                                placeholder="Fecha de publicación" value="{{ isset($libro) ? $libro->fecha : '' }}{{ old('fecha') }}">
                                             @error('fecha')
                                                 <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
@@ -48,7 +56,7 @@
                                         </div>
                                         <div class="col-md-8 form-group">
                                             <input type="text" id="password" class="form-control" name="isbn"
-                                                placeholder="ISBN" value="{{ old('isbn') }}">
+                                                placeholder="ISBN" value="{{ isset($libro) ? $libro->isbn : '' }}{{ old('isbn') }}">
                                             @error('isbn')
                                                 <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
@@ -58,7 +66,7 @@
                                         </div>
                                         <div class="col-md-8 form-group">
                                             <input type="number" id="password" class="form-control" name="cantidad"
-                                                placeholder="Cantidad" value={{ old('cantidad') }}>
+                                                placeholder="Cantidad" value={{ isset($libro) ? $libro->cantidad : '' }}{{ old('cantidad') }}>
                                             @error('cantidad')
                                                 <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
@@ -83,7 +91,7 @@
                                             </div>
                                         </div> --}}
                                         <div class="col-sm-12 d-flex justify-content-end">
-                                            <button type="submit" class="btn btn-primary me-1 mb-1">Agregar</button>
+                                            <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
                                             <button type="reset"
                                                 class="btn btn-light-secondary me-1 mb-1">Limpiar</button>
                                         </div>
