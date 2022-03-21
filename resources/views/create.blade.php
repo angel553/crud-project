@@ -9,17 +9,15 @@
                     </div>
                     <div class="card-content">
                         <div class="card-body"> 
-
                             @isset($libro)
                                 <form class="form form-horizontal" action="/libro/{{ $libro->id }}" method="POST"> {{-- update --}}                                                            
-                                    @method('PATCH')
+                                    @method('PATCH')                                    
                             @else
                                 <form class="form form-horizontal" action="/libro" method="POST">                            
                             @endisset                           
-
-                            <form class="form form-horizontal" action="/libro" method="POST">
+                            {{-- <form class="form form-horizontal" action="/libro" method="POST"> --}}
                                 @csrf
-                                <div class="form-body">
+                                <div class="form-body">                                    
                                     <div class="row">
                                         <div class="col-md-4">
                                             <label>Título</label>
@@ -28,7 +26,7 @@
                                             <input type="text" id="first-name" class="form-control" name="titulo"
                                                 placeholder="Título" value="{{ isset($libro) ? $libro->titulo : '' }}{{ old('titulo') }}">
                                             @error('titulo')
-                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                <div class="alert alert-danger">{{ $message }}</div>                                                                                          
                                             @enderror
                                         </div>
                                         <div class="col-md-4">
@@ -91,9 +89,11 @@
                                             </div>
                                         </div> --}}
                                         <div class="col-sm-12 d-flex justify-content-end">
+                                            @isset($libro)
+                                            @else
+                                                <button type="reset" class="btn btn-light-secondary me-1 mb-1">Limpiar</button>
+                                            @endisset
                                             <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
-                                            <button type="reset"
-                                                class="btn btn-light-secondary me-1 mb-1">Limpiar</button>
                                         </div>
                                     </div>
                                 </div>

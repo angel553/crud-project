@@ -94,7 +94,7 @@ class LibroController extends Controller
             'autor' => ['required', 'max:255'],
             'fecha' => 'required',
             'isbn' => ['required', 'max:13'],
-            'cantidad' => ['required', 'min:1', 'max:99'],
+            'cantidad' => 'required|integer|between:1,99',
         ]);
 
         $libro->titulo = $request->titulo;
